@@ -1,0 +1,14 @@
+form{
+    width: 70%;
+    margin-left: 200px;
+}
+.myform{
+    border-radius: 10px;
+    padding: 40px;
+    background-color: rgb(214, 130, 210);
+}
+label{
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(8, 107, 153);
+}

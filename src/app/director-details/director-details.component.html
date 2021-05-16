@@ -1,0 +1,34 @@
+<h1 class="text-info text-center">{{director}}</h1>
+
+<div class="container">
+    <div class="box border shadow  pb-3 pr-3 pt-3 col-4"
+        style="background-color: rgb(155, 196, 243);border-radius: 10px;">
+        <b>Director name: </b><b class="pl-1" style="color: rgb(168, 9, 121);">{{ directorDetails.name}}</b><br>
+        <b>Age: </b><b class="pl-1" style="color: rgb(168, 9, 121);">{{ directorDetails.age}}</b><br>
+        <b>Gender:</b><b class="pl-1" style="color: rgb(168, 9, 121);">{{directorDetails.gender}}</b> <br>
+        <b>Award Count: </b><b class="pl-1" style="color: rgb(168, 9, 121);">{{directorDetails.awardCount}}</b><br>
+    </div>
+</div>
+
+<h1 class="text-info text-center">MOVIES</h1>
+<div class="container">
+
+    <div class="row">
+
+        <div *ngFor="let movie of movies" class="mybox col-3 mt-3 mb-3 ml-5">
+
+            <div class=" border pl-3 pb-3 pt-3" style="background-color: rgb(155, 196, 243);border-radius: 10px;">
+                <b>movie name: </b><b class="pl-1" style="color: rgb(168, 9, 121);">{{ movie.name}}</b><br>
+                <b>rating:</b><b class="pl-1" style="color: rgb(168, 9, 121);">{{movie.rating}}</b> <br>
+                <b>box office collection: </b><b class="pl-1"
+                    style="color: rgb(168, 9, 121);">{{movie.boxOfficeCollection}}</b><br>
+                <b>id: </b><b class="pl-1" style="color: rgb(168, 9, 121);">{{movie.id}}</b><br>
+            </div>
+    
+        </div>
+
+    </div>
+
+   
+
+</div>

@@ -1,0 +1,12 @@
+.mybox{
+    margin-left: 100px;
+    width:50%;
+ 
+}
+.mybox:hover{
+   border:4px rgb(30, 108, 210) solid ;
+   border-radius: 14px;
+}
+.box{
+    padding: 20px;
+}

@@ -1,0 +1,24 @@
+
+<h1 class="text-info text-center">Directors</h1>
+<div class="container">
+    
+    
+    <div *ngFor="let director of directors" class=" mt-3 mb-3 ml-5">
+   
+
+        <div class="mybox ">
+            <div (click)="getDirectorWork(director.name)" class="box border shadow" style="background-color: rgb(155, 196, 243);border-radius: 10px;">
+                <b>Director name: </b><b class="pl-1"style="color: rgb(168, 9, 121);">{{  director.name}}</b><br>
+                <b>Age: </b><b class="pl-1" style="color: rgb(168, 9, 121);">{{  director.age}}</b><br>
+                <b>Gender:</b><b class="pl-1" style="color: rgb(168, 9, 121);">{{director.gender}}</b> <br>
+                <b>Award Count: </b ><b class="pl-1" style="color: rgb(168, 9, 121);">{{director.awardCount}}</b><br>
+                <button (click)="onClick(director.name)" class="btn btn-success mt-3">update details</button>
+     
+            </div>   
+
+    </div>
+       
+    
+</div>
+
+</div>

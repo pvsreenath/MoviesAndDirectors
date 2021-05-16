@@ -1,0 +1,22 @@
+<h1 class="text-info">MOVIES</h1>
+<div class="container">
+    <div class="row">
+
+        <div *ngFor="let movie of movies" class="col-5 ml-3 mr-3 mt-3 mb-3 pt-4 pl-4 pr-3 pb-4" style="background-color: rgb(155, 196, 243);border-radius: 10px;">
+
+            <b>movie name: </b><b class="pl-1" style="color: rgb(168, 9, 121);">{{ movie.name}}</b><br>
+            <b>directors: </b><b class="pl-1" style="color: rgb(168, 9, 121);">{{ movie.directors}}</b><br>
+            <b>rating:</b><b class="pl-1" style="color: rgb(168, 9, 121);">{{movie.rating}}</b> <br>
+            <b>box office collection: </b><b class="pl-1"
+                style="color: rgb(168, 9, 121);">{{movie.boxOfficeCollection}}</b><br>
+            <b>id: </b><b class="pl-1" style="color: rgb(168, 9, 121);">{{movie.id}}</b><br>
+            <button class="btn btn-danger mt-3 shadow" (click)="onClick(movie.name)">Delete</button>
+            <button class="btn btn-success mt-3 ml-3 shadow" (click)="getDirectorDetails(movie.directors[0])">Director
+                Details</button>
+    
+        </div>
+    
+
+    </div>
+
+</div>

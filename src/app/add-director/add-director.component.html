@@ -1,0 +1,54 @@
+<div class="container-fluid pb-3" style="border-radius: 4px;">
+    <h1 class="text-primary text-center">Add Director</h1>
+    <form #adddirector="ngForm" (ngSubmit)="onSubmit()" novalidate class="border shadow myform">
+
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="name" #name="ngModel" [class.is-invalid]="name.invalid && name.touched"
+                class="form-control " [(ngModel)]="directorModel.name" required>
+            <small class="text-danger" *ngIf="name.invalid && name.touched">Name is required</small>
+
+        </div>
+
+        <div class="form-group">
+            <label>Age</label>
+            <input type="number" #age="ngModel" name="age" class="form-control"
+                [class.is-invalid]="age.invalid && age.touched" [(ngModel)]="directorModel.age" required>
+
+        </div>
+
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="form-check">
+                <input class="form-check-input" [(ngModel)]="directorModel.gender" type="radio" name="gender"
+                    value="Male">
+                <label class="form-check-label">Male</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" [(ngModel)]="directorModel.gender" type="radio" name="gender"
+                    value="Female">
+                <label class="form-check-label">Female</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" [(ngModel)]="directorModel.gender" type="radio" name="gender"
+                    value="Other">
+                <label class="form-check-label">Other</label>
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <label>Award Count</label>
+            <input type="number" name="awards" #awards="ngModel" [class.is-invalid]="awards.invalid && awards.touched"
+                class="form-control" [(ngModel)]="directorModel.awardCount" required>
+        </div>
+
+        <div class="text-center">
+            <button class="btn btn-primary" [disabled]="!adddirector.form.valid" type="submit">Submit</button>
+        </div>
+
+    </form>
+
+</div>
+<router-outlet></router-outlet>
